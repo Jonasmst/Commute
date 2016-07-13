@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="102dp"
+    android:background="@drawable/borderbottom"
+    >
+
+    <!-- Time from:to -->
+    <TextView
+        android:id="@+id/Proposal_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22:10 - 22:45"
+        android:textSize="20dp"
+        android:layout_marginRight="15dp"
+        android:textAlignment="center"
+        />
+
+    <!-- Entire row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Proposal_Time"
+        android:layout_marginTop="5dp"
+        >
+
+        <!-- First medium -->
+        <LinearLayout
+            android:id="@+id/Proposal_FirstMedium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            >
+
+            <!-- Line number -->
+            <TextView
+                android:id="@+id/Proposal_First_LineNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="12"
+                android:textSize="25dp"
+                android:padding="3dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                />
+
+            <!-- Line icon -->
+            <ImageView
+                android:id="@+id/Proposal_First_LineIcon"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:padding="5dp"
+                android:layout_gravity="center_vertical|right"
+                android:scaleType="fitCenter"
+                />
+        </LinearLayout>
+
+        <!-- Walking man -->
+        <ImageView
+            android:id="@+id/Proposal_WalkingMan"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/walking"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"/>
+
+        <!-- Second medium -->
+        <LinearLayout
+            android:id="@+id/Proposal_SecondMedium"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/Proposal_FirstMedium"
+            android:layout_below="@+id/Proposal_Time"
+            android:padding="5dp"
+            android:visibility="gone"
+            >
+
+            <!-- Line number -->
+            <TextView
+                android:id="@+id/Proposal_Second_LineNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="12"
+                android:textSize="25dp"
+                android:padding="3dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                />
+
+            <!-- Line icon -->
+            <ImageView
+                android:id="@+id/Proposal_Second_LineIcon"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/tbane"
+                android:layout_gravity="center_vertical|right"
+                />
+
+        </LinearLayout>
+
+        <!-- Duration -->
+        <TextView
+            android:id="@+id/Proposal_Duration"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="right"
+            android:text="15 min"
+            android:textSize="20dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
